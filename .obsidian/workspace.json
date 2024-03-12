@@ -1,0 +1,219 @@
+{
+  "main": {
+    "id": "95a9fda2e0ef7065",
+    "type": "split",
+    "children": [
+      {
+        "id": "43b425fe17650845",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bcc3fb02a3fab2de",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/index.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "562630a9295ac4ab",
+    "type": "split",
+    "children": [
+      {
+        "id": "02b42dce28d1510c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "71c9c5a506d59a08",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "604cc479c92088b1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "755e4d31f9284667",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 354.5
+  },
+  "right": {
+    "id": "aa52299e679738d0",
+    "type": "split",
+    "children": [
+      {
+        "id": "1032ad879c5475c6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6f1d752de08d1c52",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "content/index.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "21368e838ed8f4e1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "content/index.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "082e3c7b312b799f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "b706291c5987f88c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "content/index.md"
+              }
+            }
+          },
+          {
+            "id": "4d4a1b4cdc74516a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          },
+          {
+            "id": "9522091c19128f48",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "zk-prefixer:Create new unique note": false
+    }
+  },
+  "active": "bcc3fb02a3fab2de",
+  "lastOpenFiles": [
+    "src/ssg/isLocalhost.php",
+    "LICENSE.md",
+    "vendor/composer/tmp-6fc9a4659a873473419c311fce156eac.zip",
+    "vendor/composer/tmp-6fc9a4659a873473419c311fce156eac.zip~",
+    "src/components/CC.php",
+    "docs/2024-03-12-cropped-wrap-cardigan/index.html",
+    "docs/2024-03-12-cropped-wrap-cardigan",
+    "content/_posts/2024-03-12-cropped-wrap-cardigan/images/IMG_0573.jpeg",
+    "content/_posts/2024-03-12-cropped-wrap-cardigan/images/IMG_0572.jpeg",
+    "content/_posts/2024-03-12-cropped-wrap-cardigan/images/IMG_0571.jpeg",
+    "content/_posts/2024-03-12-cropped-wrap-cardigan/images/IMG_0570.jpeg",
+    "content/_posts/2024-03-12-cropped-wrap-cardigan/images/IMG_0569.jpeg",
+    "content/_posts/2024-03-12-cropped-wrap-cardigan/images/IMG_0567.jpeg",
+    "content/_posts/2024-03-12-cropped-wrap-cardigan/images/IMG_0566.jpeg",
+    "content/_posts/2024-03-12-cropped-wrap-cardigan/images/20240312_094204.jpg",
+    "content/_posts/2024-03-12-cropped-wrap-cardigan/images/20240312_094148.jpg",
+    "content/_posts/2024-03-12-cropped-wrap-cardigan/images/20240312_094056.jpg",
+    "content/_posts/2024-03-12-cropped-wrap-cardigan/index.md",
+    "content/_posts/2024-03-12-cropped-wrap-cardigan/images",
+    "content/_posts/2024-03-12-cropped-wrap-cardigan",
+    "content/_posts",
+    "content/blog/index.md",
+    "content/index.md",
+    "content/blog/_posts/2024-03-12-cropped-wrap-cardigan/index.md",
+    "vendor/composer/tmp-400e3f3d4442eab04425e2819299ce1d.zip",
+    "vendor/composer/tmp-400e3f3d4442eab04425e2819299ce1d.zip~",
+    "vendor/composer/5a36bb47/phpstan-phpstan-f0c2f3a/README.md",
+    "content/blog/_posts/2024-03-14.md",
+    "vendor/composer/dd8c7d04/phpstan-phpstan-26e63d1/README.md",
+    "FB/README.md",
+    "content/blog/_posts/Untitled.md",
+    "content/blog/_posts/2024-03-12-cropped-wrap-cardigan/in.md",
+    "vendor/composer/85cfb765/ocubom-base-convert-37b783a/README.md",
+    "vendor/composer/82f76d07/Intervention-image-fe1b0e2/readme.md",
+    "vendor/composer/ebea7cbc/pestphp-pest-853f6ef/LICENSE.md",
+    "vendor/composer/7c302897/sebastianbergmann-phpunit-41a9886/SECURITY.md",
+    "vendor/composer/7c302897/sebastianbergmann-phpunit-41a9886/README.md",
+    "vendor/composer/7c302897/sebastianbergmann-phpunit-41a9886/DEPRECATIONS.md",
+    "vendor/composer/7c302897/sebastianbergmann-phpunit-41a9886/ChangeLog-10.5.md",
+    "vendor/composer/e0f844e9/nikic-PHP-Parser-1396767/README.md",
+    "vendor/composer/d9871baa/sebastianbergmann-code-unit-a81fee9/SECURITY.md",
+    "vendor/composer/d9871baa/sebastianbergmann-code-unit-a81fee9/README.md",
+    "vendor/composer/d9871baa/sebastianbergmann-code-unit-a81fee9/ChangeLog.md",
+    "vendor/composer/4b3cabc7/sebastianbergmann-environment-43c751b/SECURITY.md",
+    "vendor/composer/4b3cabc7/sebastianbergmann-environment-43c751b/README.md",
+    "vendor/composer/4b3cabc7/sebastianbergmann-environment-43c751b/ChangeLog.md"
+  ]
+}

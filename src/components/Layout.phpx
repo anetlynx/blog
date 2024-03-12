@@ -1,0 +1,39 @@
+<?php
+
+class LayoutProps extends \ShapeType {
+  public ?string $title;
+  public ?string $description;
+  public ?string $css;
+  public ?string $js;
+  public ?array $children;
+}
+
+return [
+  'Layout' => function (array $props) {
+    [
+      'title' => $title,
+      'description' => $description,
+      'css' => $css,
+      'js' => $js,
+      'children' => $children,
+    ] = new LayoutProps($props);
+
+    return (
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1" />
+          <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
+          <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+          <title>{$title} by @anetlynx</title>
+          <meta name="description" content={$description} />
+          <link rel="stylesheet" href={$css} />
+        </head>
+        <body>
+          {$children}
+          <script defer src={$js}></script>
+        </body>
+      </html>
+    );
+  }
+];

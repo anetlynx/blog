@@ -1,0 +1,15 @@
+{
+  "strictLineBreaks": true,
+  "alwaysUpdateLinks": true,
+  "useMarkdownLinks": true,
+  "propertiesInDocument": "visible",
+  "newFileLocation": "current",
+  "newLinkFormat": "relative",
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
+}

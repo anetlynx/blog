@@ -1,0 +1,34 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/attitude/phpx"
+        }
+    ],
+    "scripts": {
+        "compile": "php ./src/ssg/compile.php",
+        "build": "php src/ssg/build.php",
+        "rebuild": [
+            "php ./src/ssg/compile.php",
+            "php src/ssg/build.php"
+        ],
+        "post-update-cmd": "@rebuild",
+        "post-install-cmd": "@rebuild"
+    },
+    "minimum-stability": "dev",
+    "require-dev": {
+        "attitude/phpx": "dev-main",
+        "hyn/frontmatter": "^1.1",
+        "intervention/image": "^3.4",
+        "pestphp/pest": "^2.25",
+        "pestphp/pest-plugin-watch": "^2.0",
+        "thecodingmachine/safe": "^2.5",
+        "thecodingmachine/phpstan-safe-rule": "^1.2",
+        "phpstan/phpstan": "^1.10"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

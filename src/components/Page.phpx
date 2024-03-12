@@ -1,0 +1,66 @@
+<?php
+
+use function Safe\date;
+
+class PageProps extends \ShapeType {
+  public ?string $title;
+  public ?string $content;
+  public ?array $posts;
+  public ?array $tags;
+}
+
+return [
+  'Page' => function (array $props) {
+    [
+      'title' => $title,
+      'content' => $content,
+      'posts' => $posts,
+      'tags' => $tags,
+    ] = new PageProps($props);
+
+    return (
+      <>
+        <header>
+          <div className="content">
+            <Navigation data={['non-printable' => true]} title="Anet Lynx" url={getSiteConfig()->OUTPUT_URL}>
+            </Navigation>
+            <h1>{$title}</h1>
+            {$tags
+              ? (
+                <div className="tags-list">
+                  <ul className="content">{array_map(fn($tag) => <li>#{$tag}</li>, $tags)}</ul>
+                </div>
+              )
+              : null
+            }
+          </div>
+        </header>
+        <div className="content">
+          <main dangerouslySetInnerHTML={$content} />
+          {$posts
+            ? (
+              <aside>
+                <div className="content">
+                  <ul>
+                    {array_map(function ($post) {
+                      $title = getFileMeta($post, 'title') ?? basename(pathinfo($post, PATHINFO_DIRNAME));
+
+                      return <li><a href={$post}>{$title}</a></li>;
+                    }, $posts)}
+                  </ul>
+                </div>
+              </aside>
+            )
+            : null
+          }
+        </div>
+        <footer>
+          <div className="content">
+            <p>©{date('Y')} @anetlynx</p>
+            <p xmlns:cc="http://creativecommons.org/ns#" className="license">This work is licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" /><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" /><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" /></a></p>
+          </div>
+        </footer>
+      </>
+    );
+  }
+];

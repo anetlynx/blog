@@ -1,0 +1,481 @@
+/** Original source: https://piccalil.li/blog/a-more-modern-css-reset/ */
+
+/* [RESET] */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* [/RESET] */
+
+html, body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  overscroll-behavior: none;
+  padding: 0;
+}
+
+:root {
+  --content-width: calc(700rem / 16);
+  --background-color: #fff;
+}
+
+@media (prefers-color-scheme: light) {
+  * { color-scheme:light }
+  :root {
+    --background-color: #fff;
+    --color-blue-rgb: #147af3;
+    --color-cyan-rgb: #008c87;
+    --color-green-rgb: #2d9d3b;
+    --color-orange-rgb: #e67700;
+    --color-purple-rgb: #a037ff;
+    --color-red-rgb: #e74c3c;
+    --color-grey-rgb: #777;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  * { color-scheme:dark }
+  :root {
+    --background-color: #000;
+    --color-blue-rgb: #54a3f6;
+    --color-cyan-rgb: #008c87;
+    --color-green-rgb: #2d9d3b;
+    --color-orange-rgb: #e67700;
+    --color-purple-rgb: #a037ff;
+    --color-red-rgb: #e74c3c;
+    --color-grey-rgb: #999;
+  }
+  body {
+    background-color: var(--background-color);
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.navigation-link {
+  color: var(--color-purple-rgb);
+  text-decoration: none;
+}
+
+header {
+  background-color: var(--background-color);
+  background-color: color-mix(in srgb, var(--background-color) 90%, transparent);
+  background-image: linear-gradient(180deg, var(--background-color) 0%, transparent 50%);
+  backdrop-filter: blur(1em);
+  -webkit-backdrop-filter: blur(1em);
+  padding-top: 3rem;
+  margin-top: -3rem;
+  transform: translateY(-3rem);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+:where(header) h1 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+:where(header) nav {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+:where(body) > .content {
+  flex-grow: 1;
+}
+
+:where(ul:not(class)) {
+  padding-left: 0.85em;
+}
+
+:where(h1, h2, h3, h4, h5, h6, p):first-child {
+  margin-block-start: 0;
+}
+
+:where(h1, h2, h3, h4, h5, h6, p):last-child {
+  margin-block-end: 0;
+}
+
+:where(header, footer, aside) > .content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
+}
+
+:where(footer) > .content {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+:where(footer > .content) p {
+  margin: 0;
+  min-width: 0px;
+}
+:where(footer > .content) p.license {
+  flex-grow: 1;
+  text-align: start;
+}
+@media (min-width: 40rem) {
+  :where(footer > .content) p.license {
+    text-align: end;
+  }
+}
+:where(footer > .content p.license) > a {
+  display: inline-flex;
+}
+
+:where(header, footer, aside) > .content,
+:where(.print-toolbar) > .content,
+:where(main) > p,
+:where(main) > h2,
+:where(main) > h3,
+:where(main) > h4,
+:where(main) > h5,
+:where(main) > h6,
+:where(main) > ol,
+:where(main) > ul,
+.gallery {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  max-width: calc(var(--content-width) + 1.7rem);
+  padding-inline-start: 0.85rem;
+  padding-inline-end: 0.85rem;
+}
+
+:where(main) ol,
+:where(main) ul {
+  padding-left: 1.7rem;
+}
+
+:where(main) details {
+  border-radius: 0.5rem;
+  background: color-mix(in srgb, currentColor 12.5%, transparent);
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  max-width: var(--content-width);
+  padding: 1rem 1.25rem;
+}
+
+:where(main) details[data-type="note"],
+:where(main) details[data-type="info"],
+:where(main) details[data-type="todo"] {
+  color: var(--color-blue-rgb);
+}
+
+:where(main) details[data-type="abstract"],
+:where(main) details[data-type="tldr"],
+:where(main) details[data-type="tip"] {
+  color: var(--color-cyan-rgb);
+}
+
+:where(main) details[data-type="warning"],
+:where(main) details[data-type="caution"],
+:where(main) details[data-type="attention"],
+:where(main) details[data-type="question"],
+:where(main) details[data-type="help"],
+:where(main) details[data-type="faq"] {
+  color: var(--color-orange-rgb);
+}
+
+:where(main) details[data-type="danger"],
+:where(main) details[data-type="failure"],
+:where(main) details[data-type="fail"],
+:where(main) details[data-type="danger"],
+:where(main) details[data-type="error"],
+:where(main) details[data-type="missing"],
+:where(main) details[data-type="bug"] {
+  color: var(--color-red-rgb);
+}
+
+:where(main) details[data-type="success"],
+:where(main) details[data-type="check"],
+:where(main) details[data-type="done"] {
+  color: var(--color-green-rgb);
+}
+
+:where(main) details[data-type="example"] {
+  color: var(--color-purple-rgb);
+}
+
+:where(main) details[data-type="quote"] {
+  color: var(--color-grey-rgb);
+}
+
+:where(main details) > summary {
+  cursor: pointer;
+  flex-wrap: wrap;
+  font-weight: 700;
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
+  padding-inline-start: 1.25rem;
+  padding-inline-end: 1.25rem;
+  margin: -1rem -1.25rem;
+  user-select: none;
+}
+
+summary::marker { content: '' }
+summary::-webkit-details-marker { display: none }
+
+:where(main details > summary) > .lucide {
+  width: 1lh;
+  height: 1lh;
+  display: inline-block;
+  vertical-align: middle;
+  padding: calc((1lh - (1em * 1.12)) * 0.5);
+  margin: calc((1lh - (1em * 1)) * -0.5);
+  margin-inline-end: 0.25em;
+}
+:where(main details) > summary::after {
+  align-items: center;
+  content: '›';
+  display: inline-flex;
+  float: right;
+  height: 1lh;
+  justify-content: center;
+  margin-inline-end: -0.5em;
+  transform: rotate(180deg);
+  transition: transform 0.2s ease-in-out;
+  vertical-align: middle;
+  width: 1lh;
+}
+
+:where(main details[open]) > summary::after {
+  transform: rotate(90deg);
+}
+
+:where(main) > .gallery {
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+:where(main > .gallery) > .gallery-content {
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+:where(.gallery-content) img {
+  max-width: unset;
+  pointer-events: none;
+}
+
+.tags-list {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.85em;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+:where(.tags-list) ul {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+dialog {
+  display: flex;
+  padding: 1rem 1.25rem;
+  max-width: calc(100%);
+  max-height: calc(100%);
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  user-select: none;
+}
+dialog::backdrop {
+  background-color: color-mix(in srgb, currentColor 10%, var(--background-color) 75%);
+  backdrop-filter: blur(1em);
+  -webkit-backdrop-filter: blur(1em);
+}
+:where(dialog:not([open])) > .close-button {
+  display: none;
+}
+
+button {
+  border: none;
+  border-radius: 0.5rem;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  margin-block-start: -0.2rem;
+  margin-block-end: -0.2rem;
+}
+
+:where(dialog) > .close-button {
+  color-scheme: dark dark;
+  background-color: var(--color-purple-rgb);
+  opacity: 0;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  right: 0.5rem;
+  top: 0.5rem;
+}
+:where(dialog) > .content {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4rem;
+  gap: 2rem;
+}
+:where(dialog > .content) > img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.close-button:focus {
+  opacity: 100%;
+}
+
+.print-toolbar {
+  background-color: var(--color-purple-rgb);
+  color: white;
+  color-scheme: dark dark;
+  display: none;
+}
+:where(.print-toolbar) > .content {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: unset;
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
+}
+:where(.print-toolbar) .actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-width: 0;
+  gap: 0.75rem;
+}
+:where(.print-toolbar > .content) > p {
+  flex: 1 1 15rem;
+  margin: 0;
+}
+
+:where(body.print-mode) .print-toolbar {
+  display: block;
+}
+
+#toggle-print-button {
+  display: inline-block;
+  margin-inline-start: auto;
+}
+
+:where(body.print-mode) #toggle-print-button {
+  display: none;
+}
+
+:where(body.print-mode) [data-non-printable] {
+  opacity: 0.25;
+}
+
+:where(body.print-mode) main > * * {
+  pointer-events: none;
+}
+
+:where(body.print-mode) main > * {
+  border-radius: 0.5rem;
+}
+:where(body.print-mode) main > *:hover {
+  outline: 2px solid var(--color-purple-rgb);
+  outline-offset: 0.5rem;
+  cursor: pointer;
+}
+
+@media print {
+  [data-non-printable],
+  :where(header) > .print-toolbar {
+    display: none;
+  }
+}
