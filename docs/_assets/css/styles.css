@@ -391,8 +391,6 @@ summary::-webkit-details-marker { display: none }
 }
 
 dialog {
-  display: flex;
-  padding: 1rem 1.25rem;
   max-width: calc(100%);
   max-height: calc(100%);
   padding: 0;
@@ -401,6 +399,7 @@ dialog {
   user-select: none;
 }
 dialog[open] {
+  display: flex;
   height: 100dvh;
   width: 100dvh;
 }
@@ -436,13 +435,16 @@ button {
   top: 0.5rem;
 }
 :where(dialog) > .content {
-  display: flex;
+  display: none;
   flex-direction: row;
   overflow-x: auto;
   overflow-y: hidden;
   overscroll-behavior: contain;
   padding: 4rem;
   gap: 2rem;
+}
+:where(dialog[open]) > .content {
+  display: flex;
 }
 :where(dialog > .content) > img {
   max-width: 100%;
