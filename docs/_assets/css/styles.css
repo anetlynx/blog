@@ -400,13 +400,20 @@ dialog {
   border: none;
   user-select: none;
 }
-dialog::backdrop {
+dialog[open] {
+  height: 100dvh;
+  width: 100dvh;
+}
+dialog {
   background-color: color-mix(in srgb, currentColor 10%, var(--background-color) 75%);
   backdrop-filter: blur(1em);
   -webkit-backdrop-filter: blur(1em);
 }
 :where(dialog:not([open])) > .close-button {
   display: none;
+}
+body:has(dialog[open]) {
+  overflow: hidden;
 }
 
 button {
@@ -433,6 +440,7 @@ button {
   flex-direction: row;
   overflow-x: auto;
   overflow-y: hidden;
+  overscroll-behavior: contain;
   padding: 4rem;
   gap: 2rem;
 }
