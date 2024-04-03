@@ -25,18 +25,18 @@ return [
     ] = new AppProps($props);
 
     return (
-      ['Layout', [
+      ['$', 'Layout', [
         'title'=>($title),
         'description'=>($description),
         'css'=>($css),
         'js'=>($js),
-], [
-        ['Page', [
+      ], [
+        ['$', 'Page', [
           'title'=>($title),
           'content'=>($content),
           'posts'=>($posts),
           'tags'=>($tags),
-]],
+        ]],
       ]]
     );
   },

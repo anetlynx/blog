@@ -19,19 +19,19 @@ return [
     ] = new LayoutProps($props);
 
     return (
-      ['html', ['lang'=>"en"], [
-        ['head', null, [
-          ['meta', ['charset'=>"UTF-8"]],
-          ['meta', ['name'=>"viewport", 'content'=>"width=device-width, viewport-fit=cover, initial-scale=1"]],
-          ['meta', ['name'=>"theme-color", 'content'=>"#FFFFFF", 'media'=>"(prefers-color-scheme: light)"]],
-          ['meta', ['name'=>"theme-color", 'content'=>"#000000", 'media'=>"(prefers-color-scheme: dark)"]],
-          ['title', null, [($title), ' by @anetlynx']],
-          ['meta', ['name'=>"description", 'content'=>($description)]],
-          ['link', ['rel'=>"stylesheet", 'href'=>($css)]],
+      ['$', 'html', ['lang'=>"en"], [
+        ['$', 'head', null, [
+          ['$', 'meta', ['charset'=>"UTF-8"]],
+          ['$', 'meta', ['name'=>"viewport", 'content'=>"width=device-width, viewport-fit=cover, initial-scale=1"]],
+          ['$', 'meta', ['name'=>"theme-color", 'content'=>"#FFFFFF", 'media'=>"(prefers-color-scheme: light)"]],
+          ['$', 'meta', ['name'=>"theme-color", 'content'=>"#000000", 'media'=>"(prefers-color-scheme: dark)"]],
+          ['$', 'title', null, [($title), ' by @anetlynx']],
+          ['$', 'meta', ['name'=>"description", 'content'=>($description)]],
+          ['$', 'link', ['rel'=>"stylesheet", 'href'=>($css)]],
         ]],
-        ['body', null, [
+        ['$', 'body', null, [
           ($children),
-          ['script', ['defer'=>true, 'src'=>($js)]],
+          ['$', 'script', ['defer'=>true, 'src'=>($js)]],
         ]],
       ]]
     );

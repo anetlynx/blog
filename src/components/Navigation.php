@@ -17,9 +17,9 @@ return [
     ] = new NavigationProps($props);
 
     return (
-      ['nav', ['data'=>($data), 'id'=>"navigation", 'className'=>"navigation"], [
-        ['a', ['href'=>($url), 'className'=>"navigation-link"], [
-          ['strong', ['className'=>"navigation-title"], [($title)]],
+      ['$', 'nav', ['data'=>($data), 'id'=>"navigation", 'className'=>"navigation"], [
+        ['$', 'a', ['href'=>($url), 'className'=>"navigation-link"], [
+          ['$', 'strong', ['className'=>"navigation-title"], [($title)]],
         ]],
         ($children),
       ]]

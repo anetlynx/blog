@@ -113,7 +113,7 @@ globMapRecursive('content/*.md', function ($file) use ($components, $frontMatter
 
   if (file_put_contents($outDocumentPath, (
     "<!DOCTYPE html>\n".
-    $renderer->render(['App', [
+    $renderer->render(['$', 'App', [
       ...((array) $meta),
       'content' => $content,
       'posts' => $posts,
